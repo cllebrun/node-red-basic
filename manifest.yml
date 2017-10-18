@@ -1,10 +1,10 @@
 applications:
-- path: .
-  memory: 512M
-  instances: 1
-  domain: mybluemix.net
-  name: node-red-basic
-  host: node-red-basic
-  disk_quota: 1024M
+- memory: 512M
   services:
-  - node-red-basic-cloudantNoSQLDB
+  - sample-node-red-cloudantNoSQLDB
+  env:
+    NODE_RED_STORAGE_NAME: sample-node-red-cloudantNoSQLDB
+declared-services:
+  sample-node-red-cloudantNoSQLDB:
+    label: cloudantNoSQLDB
+plan: Lite
